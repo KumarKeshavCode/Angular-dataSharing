@@ -1,0 +1,15 @@
+<p>parent works!</p>
+
+
+<button (click)="updateDataInDataService()">Update Data</button>
+<div *ngFor="let note of notesList">
+    <app-child [noteDetails]="note" 
+    (sendDataToParent)="handleUpdateNotesList($event)"
+    [dataFromParent]=""
+    ></app-child>
+
+
+</div>
+
+
+
